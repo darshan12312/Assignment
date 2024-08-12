@@ -26,19 +26,19 @@ function LandingP() {
 
   return (
     <div className='h-screen text-white flex flex-col items-center gap-0 overflow-hidden'>
-      <h1 className='text-black font-bold text-[70px] mb-10'>Discover Unlimited Content</h1>
-      <div className="heading flex items-center justify-around text-black list-none rounded-lg border-2 h-16 w-[650px]">
-        <li className='h-14 rounded-md w-40 flex items-center justify-center bg-[#6f42f5]  text-white font-semibold'>Popular</li>
-        <li className='h-14 rounded-md w-40 flex items-center justify-center   text-black font-semibold'>Latest</li>
-        <li className='h-14 rounded-md w-40 flex items-center justify-center   text-black font-semibold'>Top Rated</li>
-        <li className='h-14 rounded-md w-40 flex items-center justify-center   text-black font-semibold'>Recommended</li>
+      <h1 className='text-black font-bold text-[25px] lg:text-[70px] mb-10'>Discover Unlimited Content</h1>
+      <div className="heading flex w-[300px] items-center justify-around text-black list-none rounded-lg border-2 h-16 md:w-[650px]">
+        <li className='h-14 rounded-md md:w-40 p-1 flex-wrap text-sm md:text-lg flex items-center justify-center bg-[#6f42f5]  text-white font-semibold'>Popular</li>
+        <li className='h-14 rounded-md md:w-40 p-1 flex-wrap text-sm md:text-lg flex items-center justify-center   text-black font-semibold'>Latest</li>
+        <li className='h-14 rounded-md md:w-40 p-1 flex-wrap text-sm md:text-lg flex items-center justify-center   text-black font-semibold'>Top Rated</li>
+        <li className='h-14 rounded-md md:w-40 p-1 flex-wrap text-sm md:text-lg flex items-center justify-center   text-black font-semibold'>Recommended</li>
       </div>
       <div
         className="carousel relative flex justify-center items-center"
         style={{
           width: '600px',
           height: '600px',
-          top:"180px",
+          top: window.innerWidth <= 768 ? '240px' : '180px',
         }}
       >
         {images.map((src, index) => {
